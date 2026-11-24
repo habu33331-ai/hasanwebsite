@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warning Alert</title>
+
+<style>
+body {
+    background: #090909;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.warning {
+    color: red;
+    font-size: 38px;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+.box {
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 25px 15px;
+    margin-top: 40px;
+    box-shadow: 0 0 20px red;
+}
+
+h2 {
+    color: #ff3333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: darkred;
+}
+
+#message {
+    display: none;
+    color: #00ff66;
+    font-size: 25px;
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="warning">⚠ WARNING ⚠</div>
+
+    <h2>জরুরি সতর্কবার্তা!</h2>
+
+    <p>
+        আপনি একটি রহস্যময় সতর্কবার্তা পেয়েছেন!
+        <br>
+        বিস্তারিত জানতে নিচের বাটনে চাপ দিন।
+    </p>
+
+    <button onclick="showMessage()">
+        রহস্য উন্মোচন করুন
+    </button>
+
+    <div id="message">
+        😂 আরে বন্ধু!
+        <br>
+        ভয় পেয়েছো?
+        <br>
+        মজা করলাম!
+    </div>
+
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
